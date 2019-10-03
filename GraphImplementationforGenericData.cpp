@@ -24,7 +24,14 @@ class Graph{
             cout<<i.first<<"->";
             for(auto j:i.second)
             {
-                cout<<j<<"-";
+                if(j == (i.second).back())
+                {
+                    cout<<j;
+                }
+                else
+                {
+                    cout<<j<<"-";
+                }
             }
             cout<<"\n";
         }
