@@ -40,12 +40,18 @@ class Graph{
         }
         q.push(src);
         dist[src] = 0;
+        cout<<"The Shortest Path is ";
+        int k=0;
         while(!q.empty())
         {
+            if(k==1)
+            {
+                cout<<" -> ";
+            }
+            k=1;
             T node = q.front();
             q.pop();
-            cout<<node<<" ";
-
+            cout<<node;
             for(auto neighbour:adjList[node])
             {
                 if(dist[neighbour]==INT_MAX)
@@ -55,10 +61,11 @@ class Graph{
                 }
             }
         }
+        cout<<endl;
         for(auto i:adjList)
         {
             T node = i.first;
-            cout<<"Distance of "<<node<<"from "<<src<<"is "<<dist[node]<<"\n";
+            cout<<"Distance of "<<node<<" from "<<src<<" is "<<dist[node]<<"\n";
         }
     }
 };

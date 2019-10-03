@@ -25,7 +25,14 @@ class Graph{
             cout<<i<<"->";
             for(int vertex:l[i])
             {
-                cout<<vertex<<"-";
+                if(vertex == l[i].back())
+                {
+                    cout<<vertex;
+                }
+                else
+                {
+                    cout<<vertex<<"-";
+                }
             }
             cout<<"\n";
 
